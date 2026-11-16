@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinthia Luz Mamani Chata | Ciencia de Datos - UCSP</title>
+    <!-- Fuentes de Google inspiradas en estilo académico -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;1,400&family=Public+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Iconos para LinkedIn y elementos visuales -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-wine: #722F37;
+            --accent-pink: #D4A5A5;
+            --bg-cream: #FDFBF7;
+            --text-dark: #2C2C2C;
+            --border-color: #E6DFD5;
+            --card-bg: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Public Sans', sans-serif;
+            background-color: var(--bg-cream);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--primary-wine);
+            color: #FFFFFF;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            border-bottom: 4px solid var(--accent-pink);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Detalle de diseño ambiental de Ciencia de Datos (patrón sutil de red/datos) */
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: radial-gradient(rgba(212, 165, 165, 0.15) 1px, transparent 1px);
+            background-size: 20px 20px;
+            opacity: 0.6;
+            pointer-events: none;
+        }
+
+        header h1 {
+            font-family: 'Crimson Pro', serif;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.5px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            font-weight: 300;
+            color: var(--accent-pink);
+            margin-bottom: 1rem;
+        }
+
+        .header-links {
+            margin-top: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .header-links a {
+            color: #FFFFFF;
+            text-decoration: underline;
+            margin: 0 10px;
+            transition: opacity 0.2s;
+        }
+
+        .header-links a:hover {
+            opacity: 0.8;
+        }
+
+        nav {
+            background-color: #FFFFFF;
+            border-bottom: 1px solid var(--border-color);
+            padding: 0.8rem 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        nav a {
+            color: var(--text-dark);
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--primary-wine);
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+
+        section {
+            margin-bottom: 3.5rem;
+        }
+
+        h2 {
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.8rem;
+            color: var(--primary-wine);
+            margin-bottom: 1.2rem;
+            padding-bottom: 0.4rem;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .profile-container {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 2rem;
+            align-items: center;
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        }
+
+        .profile-avatar {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.9rem;
+            color: #666;
+            border: 3px solid var(--accent-pink);
+            overflow: hidden;
+        }
+
+        .profile-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .profile-text p {
+            font-size: 1.05rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Materias / Cursos */
+        .materias-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.2rem;
+        }
+
+        .materia-card {
+            background: var(--card-bg);
+            padding: 1.2rem 1.5rem;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .materia-card:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent-pink);
+        }
+
+        .materia-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.4rem;
+            color: var(--primary-wine);
+        }
+
+        .materia-card p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        /* Profesores y enlaces con iconos de LinkedIn */
+        .profesores-list, .malla-list {
+            background: var(--card-bg);
+            padding: 1.5rem 2rem;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        li {
+            margin-bottom: 0.8rem;
+            font-size: 0.95rem;
+        }
+
+        li a {
+            color: var(--primary-wine);
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        li a:hover {
+            text-decoration: underline;
+        }
+
+        li a i {
+            color: #0A66C2; /* Color oficial de LinkedIn */
+        }
+
+        footer {
+            background-color: #241A1C;
+            color: #E6DFD5;
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+            border-top: 4px solid var(--primary-wine);
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .profile-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+                justify-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Cinthia Luz Mamani Chata</h1>
+        <p>Estudiante de Primer Semestre</p>
+        <div class="header-links">
+            <a href="https://ucsp.edu.pe" target="_blank">Universidad Católica San Pablo (UCSP)</a> | 
+            <a href="https://ucsp.edu.pe/carreras/ciencia-de-datos/" target="_blank">Ciencia de Datos</a>
+        </div>
+    </header>
+
+    <nav>
+        <a href="#perfil">Perfil</a>
+        <a href="#materias">Materias</a>
+        <a href="#malla">Malla curricular</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <main>
+        <!-- SECCIÓN PERFIL -->
+        <section id="perfil">
+            <h2>Perfil</h2>
+            <div class="profile-container">
+                <div class="profile-avatar">
+                    <!-- Si guardas tu foto como foto.jpg en el repositorio, se mostrará aquí -->
+                    <img src="foto.jpg" alt="Cinthia Luz Mamani Chata" onerror="this.style.display='none'; this.parentElement.innerHTML='Sube tu archivo foto.jpg';">
+                </div>
+                <div class="profile-text">
+                    <p>Soy de primer semestre.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN MATERIAS -->
+        <section id="materias">
+            <h2>Materias</h2>
+            <div class="materias-grid">
+                <div class="materia-card">
+                    <h3>Fundamentos de Programación</h3>
+                    <p>Profesora: Sabrina</p>
+                </div>
+                <div class="materia-card">
+                    <h3>Matemáticas Básicas</h3>
+                    <p>Formación analítica y lógica.</p>
+                </div>
+                <div class="materia-card">
+                    <h3>Introducción a la Ciencia de Datos</h3>
+                    <p>Principios y visión general de la disciplina.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN MALLA CURRICULAR -->
+        <section id="malla">
+            <h2>Malla curricular</h2>
+            <div class="malla-list">
+                <p>Plan de estudios enfocado en matemáticas, estadística, programación avanzada y gestión inteligente de grandes volúmenes de información a lo largo de los semestres académicos.</p>
+            </div>
+        </section>
+
+        <!-- SECCIÓN CONTACTO Y PROFESORES/COMPAÑEROS CON LINKEDIN -->
+        <section id="contacto">
+            <h2>Contacto y Red Académica</h2>
+            <div class="profesores-list">
+                <p style="margin-bottom: 1rem;">Conecta con integrantes de la comunidad académica:</p>
+                <ul>
+                    <!-- Solo aparecen quienes tienen enlace de LinkedIn válido -->
+                    <li>Yessenia Yari — <a href="https://www.linkedin.com/in/yessenia-yari-ejemplo" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn de Yessenia</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Correo institucional: cinthia.mamani@ucsp.edu.pe</p>
+        <p>GitHub: <a href="https://github.com/cinthia-tech609" target="_blank" style="color: var(--accent-pink);">cinthia-tech609</a></p>
+        <p>&copy; 2026 Cinthia Luz Mamani Chata</p>
+    </footer>
+
+</body>
+</html>
