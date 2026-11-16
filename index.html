@@ -1,365 +1,225 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cinthia Luz Mamani Chata | Ciencia de Datos, Universidad Católica San Pablo</title>
-    <style>
-        /* Estilos generales y colores */
-        :root {
-            --bg-color: #f5f0eb; /* Color crema de fondo */
-            --text-color: #5a1827; /* Color vino tinto de la UCSP */
-            --dark-bg: #3e121d;
-        }
-        body {
-            font-family: 'Georgia', serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-        a {
-            color: var(--text-color);
-            text-decoration: none;
-            font-weight: bold;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        
-        /* Barra superior y Navegación */
-        .top-bar {
-            background-color: var(--dark-bg);
-            color: #fff;
-            text-align: center;
-            padding: 8px;
-            font-family: monospace;
-            font-size: 0.85rem;
-        }
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid rgba(90, 24, 39, 0.2);
-            font-family: sans-serif;
-            font-size: 0.85rem;
-        }
-        .nav-links a {
-            margin-left: 15px;
-            text-transform: uppercase;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cinthia Luz Mamani Chata | Ciencia de Datos, Universidad Católica San Pablo</title>
+<meta name="description" content="Portafolio de Cinthia Luz Mamani Chata, de Ciencia de Datos en la Universidad Católica San Pablo (UCSP). Perfil, materias, malla curricular y compañeros.">
+<link rel="canonical" href="https://cinthia-tech609.github.io/cinthialuzmamanichata/">
+<meta property="og:title" content="Cinthia Luz Mamani Chata | Portafolio">
+<meta property="og:description" content="Ciencia de Datos, Universidad Católica San Pablo.">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://cinthia-tech609.github.io/cinthialuzmamanichata/">
+<meta property="og:image" content="https://cinthia-tech609.github.io/cinthialuzmamanichata/universidad1.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Cinthia Luz Mamani Chata",
+  "url": "https://cinthia-tech609.github.io/cinthialuzmamanichata/",
+  "email": "cinthia.mamani@ucsp.edu.pe",
+  "alumniOf": { "@type": "CollegeOrUniversity", "name": "Universidad Católica San Pablo", "url": "https://ucsp.edu.pe/" },
+  "sameAs": ["https://github.com/cinthia-tech609"]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Cormorant+Garamond:wght@500;600&family=Jost:wght@400;500&family=JetBrains+Mono:wght@400&family=Pinyon+Script&display=swap" rel="stylesheet">
+<style>
+:root{--wine:#5b1d27;--cream:#ece6dd;--rose:#b9766f;--blush:#e4cdc6;--ink:#2d1b1e;--line:#c9bfb2;
+--display:"Anton",Impact,"Arial Narrow",sans-serif;--serif:"Cormorant Garamond",Georgia,serif;--script:"Pinyon Script","Brush Script MT",cursive;--body:"Jost",system-ui,-apple-system,"Segoe UI",sans-serif;--mono:"JetBrains Mono",ui-monospace,Menlo,monospace}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;color-scheme:light}
+body{margin:0;background:var(--cream);color:var(--ink);font:400 1.02rem/1.6 var(--body)}
+a{color:inherit}
+a:focus-visible{outline:3px solid var(--rose);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 1.4rem}
+.li{width:1.05em;height:1.05em;fill:currentColor;vertical-align:-.15em;margin-right:.4em}
 
-        /* Contenedores principales */
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-        
-        /* NUEVA PORTADA (Hero Section) */
-        .hero {
-            text-align: center;
-            padding: 120px 20px;
-        }
-        .hero h1 {
-            font-size: 4.5rem;
-            font-weight: 900;
-            margin-bottom: 30px;
-            text-transform: uppercase;
-            line-height: 1.1;
-            letter-spacing: 2px;
-        }
-        .hero p {
-            max-width: 650px;
-            margin: 0 auto;
-            font-size: 1.15rem;
-            font-family: sans-serif;
-            font-weight: 500;
-        }
+.ribbon{background:var(--wine);color:var(--cream);font:400 .78rem/1.4 var(--mono);letter-spacing:.05em;text-align:center;padding:.55rem 1rem}
+.ribbon i{color:var(--blush);font-style:normal;margin:0 .5rem}
+.topbar{display:flex;justify-content:space-between;align-items:center;gap:.6rem 1.4rem;flex-wrap:wrap;padding:1rem 0;border-bottom:1px solid var(--line);font-size:.82rem;letter-spacing:.13em;text-transform:uppercase}
+.topbar nav{display:flex;flex-wrap:wrap;gap:.4rem 1.2rem}
+.topbar nav a{text-decoration:none}
+.topbar nav a:hover{color:var(--rose)}
 
-        /* Títulos de secciones */
-        h2.section-title {
-            text-align: center;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            margin-top: 60px;
-            margin-bottom: 40px;
-            font-size: 1.5rem;
-        }
+.hero{position:relative;display:grid;grid-template-columns:1.05fr .95fr;column-gap:2rem;padding-top:1.2rem}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(var(--line) 1.2px,transparent 1.4px) 0 0/22px 22px;-webkit-mask-image:linear-gradient(#000,transparent 80%);mask-image:linear-gradient(#000,transparent 80%);opacity:.7;pointer-events:none}
+.hero h1{grid-column:1/-1;margin:0;font:400 clamp(3.6rem,17.5vw,13.5rem)/.95 var(--display);color:var(--wine);text-transform:uppercase;letter-spacing:.005em;position:relative;z-index:1}
+.intro{grid-row:2;align-self:start;padding-top:1rem;position:relative;z-index:1}
+.script{font:400 2.6rem/1 var(--script);color:var(--rose);margin:0}
+.tagline{font:600 clamp(1.7rem,4vw,2.6rem)/1.1 var(--serif);letter-spacing:.03em;margin:.2rem 0 1rem;text-transform:uppercase}
+.sign{font:400 2.1rem/1 var(--script);color:var(--wine);margin:0 0 1.2rem}
+.viz{width:min(230px,70%);height:auto;display:block}
+.arch{grid-column:2;grid-row:2;position:relative;z-index:2;margin-top:calc(-1*clamp(1.5rem,8vw,6.5rem))}
+.arch .photo{aspect-ratio:4/5;border-radius:999px 999px 0 0;background:var(--blush) center/cover no-repeat}
+.badge{position:absolute;right:-1.2rem;top:42%;width:112px;height:112px;border-radius:50%;background:var(--wine);color:var(--cream)}
+.badge svg{width:100%;height:100%}
 
-        /* Cuadrículas para organizar el contenido */
-        .grid-3 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-        .grid-2 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            text-align: center;
-        }
-        
-        /* Cajas de la Malla Curricular */
-        .ciclo-box {
-            background: rgba(90, 24, 39, 0.05);
-            padding: 20px;
-            border-radius: 8px;
-            font-family: sans-serif;
-            font-size: 0.9rem;
-        }
-        .ciclo-box h3 {
-            margin-top: 0;
-            border-bottom: 1px solid var(--text-color);
-            padding-bottom: 10px;
-        }
+.campus{display:grid;grid-template-columns:1.5fr 1fr;gap:.8rem;margin-top:2.6rem}
+.shot{height:clamp(190px,31vw,340px);background:var(--blush) center/cover no-repeat}
 
-        /* Estilo de Materias y Compañeros */
-        .list-item {
-            margin-bottom: 15px;
-            padding-bottom: 10px;
-            border-bottom: 1px dashed rgba(90, 24, 39, 0.2);
-        }
+.divider{display:flex;align-items:center;gap:1rem;margin:3.4rem 0 1.4rem;font-size:.85rem;letter-spacing:.22em;text-transform:uppercase}
+.divider::before,.divider::after{content:"";flex:1;height:1px;background:var(--line)}
+.perfil{max-width:46rem;margin:0 auto;text-align:center;font:500 1.3rem/1.6 var(--serif)}
 
-        /* Footer / Contacto */
-        footer {
-            background-color: var(--text-color);
-            color: var(--bg-color);
-            padding: 60px 20px 20px 20px;
-            margin-top: 50px;
-        }
-        footer a {
-            color: var(--bg-color);
-        }
-        .conectemos-title {
-            text-align: center;
-            font-size: 4rem;
-            margin-bottom: 30px;
-            font-style: italic;
-            font-family: serif;
-        }
-    </style>
+.mats{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.mats>li{border:1px solid var(--line);padding:1rem 1.1rem;display:grid;grid-template-columns:48px 1fr;gap:.9rem}
+.dot{width:48px;height:48px;border-radius:50%;background:var(--rose);color:var(--cream);display:grid;place-items:center;font-size:1.25rem}
+.mats b{display:block;font:600 1.2rem/1.2 var(--serif);letter-spacing:.04em;text-transform:uppercase;margin-bottom:.3rem}
+.t{margin-bottom:.35rem;font-size:.95rem}
+.t>*{display:block}
+.p{color:var(--wine);font-weight:500;text-decoration:none}
+.p:hover{text-decoration:underline}
+.m{font:400 .8rem var(--mono);color:var(--ink);text-decoration:none}
+.m:hover{text-decoration:underline}
+
+.malla{display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:.8rem}
+.cy{border:1px solid var(--line);padding:.9rem 1rem}
+.cy h3{margin:0 0 .5rem;font:600 .95rem var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--wine)}
+.cy ul{margin:0;padding-left:1.05rem;font-size:.9rem;line-height:1.45}
+.cy li{margin-bottom:.2rem}
+.cy.now{background:var(--wine);color:var(--cream);border-color:var(--wine)}
+.cy.now h3{color:var(--blush)}
+.cy small{display:inline-block;margin-left:.4rem;font:400 .65rem var(--mono);letter-spacing:.06em;background:var(--blush);color:var(--wine);padding:.1rem .45rem;border-radius:99px;vertical-align:middle}
+
+.peers{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:.7rem 1.4rem}
+.peers li{border-bottom:1px solid var(--line);padding:.55rem 0}
+
+footer{background:var(--wine);color:var(--cream);margin-top:4rem;padding:2.6rem 0 2.2rem}
+footer .wrap{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:2rem;align-items:center}
+footer .big{font:400 clamp(2.6rem,6vw,4rem)/1 var(--script);margin:0}
+footer h2{font:500 .8rem var(--body);letter-spacing:.22em;text-transform:uppercase;margin:0 0 .6rem}
+footer a{text-decoration:none}
+.social{display:flex;gap:.6rem}
+.social a{width:40px;height:40px;border:1px solid var(--cream);border-radius:50%;display:grid;place-items:center;font-size:.82rem;font-weight:500}
+.social a:hover{background:var(--cream);color:var(--wine)}
+.copy{text-align:center;font-size:.8rem;opacity:.75;margin-top:1.6rem;grid-column:1/-1}
+
+@media(max-width:820px){
+.hero{grid-template-columns:1fr}
+.intro,.arch{grid-column:1;grid-row:auto}
+.arch{width:78%;margin:-1.5rem 0 0 auto}
+.badge{right:auto;left:-1.5rem}
+.campus,.mats{grid-template-columns:1fr}
+.peers{grid-template-columns:1fr 1fr}
+footer .wrap{grid-template-columns:1fr}}
+@media(max-width:520px){.peers{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="in" viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></symbol></svg>
 
-    <!-- BARRA SUPERIOR -->
-    <div class="top-bar">
-        import datos → limpiar() → modelar() → visualizar() → decidir()
+<div class="ribbon" aria-hidden="true">import datos<i>→</i>limpiar()<i>→</i>modelar()<i>→</i>visualizar()<i>→</i>decidir()</div>
+
+<div class="wrap">
+  <header class="topbar">
+    <span>Ciencia de Datos · Universidad Católica San Pablo</span>
+    <nav aria-label="Enlaces y secciones">
+      <a href="https://ucsp.edu.pe/" target="_blank" rel="noopener">Universidad ↗</a>
+      <a href="https://dc.ucsp.edu.pe/pregrado/ciencia-datos/" target="_blank" rel="noopener">Carrera ↗</a>
+      <a href="#perfil">Perfil</a><a href="#materias">Materias</a><a href="#malla">Malla curricular</a><a href="#companeros">Compañeros</a><a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-label="Presentación">
+      <h1>Portafolio</h1>
+      <div class="intro">
+        <p class="script">Entre datos y código,</p>
+        <p class="tagline">Aprende.<br>Conecta.<br>Crece.</p>
+        <p class="sign">Cinthia Luz Mamani Chata</p>
+        <svg class="viz" viewBox="0 0 220 90" aria-hidden="true">
+          <g fill="#e4cdc6"><rect x="6" y="52" width="22" height="34"/><rect x="40" y="38" width="22" height="48"/><rect x="74" y="58" width="22" height="28"/><rect x="108" y="26" width="22" height="60"/><rect x="142" y="42" width="22" height="44"/><rect x="176" y="14" width="22" height="72"/></g>
+          <polyline points="17,44 51,30 85,50 119,18 153,34 187,6" fill="none" stroke="#5b1d27" stroke-width="2"/>
+          <g fill="#b9766f"><circle cx="17" cy="44" r="3.5"/><circle cx="51" cy="30" r="3.5"/><circle cx="85" cy="50" r="3.5"/><circle cx="119" cy="18" r="3.5"/><circle cx="153" cy="34" r="3.5"/><circle cx="187" cy="6" r="3.5"/></g>
+        </svg>
+      </div>
+      <div class="arch">
+        <div class="photo" role="img" aria-label="Retrato de Cinthia Luz Mamani Chata" style="background-image:url('foto.jpg')"></div>
+        <div class="badge" aria-hidden="true">
+          <svg viewBox="0 0 120 120"><defs><path id="circ" d="M60,60 m-43,0 a43,43 0 1,1 86,0 a43,43 0 1,1 -86,0"/></defs>
+          <text font-size="9.5" fill="#ece6dd" letter-spacing="2.6" font-family="Jost, sans-serif"><textPath href="#circ">DATOS · CÓDIGO · 2026 · IDEAS ·</textPath></text>
+          <text x="60" y="68" text-anchor="middle" font-size="22" fill="#ece6dd">✦</text></svg>
+        </div>
+      </div>
+    </section>
+
+    <div class="campus">
+      <div class="shot" role="img" aria-label="Campus de la Universidad Católica San Pablo" style="background-image:url('universidad1.jpg')"></div>
+      <div class="shot" role="img" aria-label="Terraza verde del campus de la UCSP" style="background-image:url('universidad2.jpg')"></div>
     </div>
 
-    <!-- NAVEGACIÓN -->
-    <nav class="nav-container">
-        <div><strong>CIENCIA DE DATOS · UNIVERSIDAD CATÓLICA SAN PABLO</strong></div>
-        <div class="nav-links">
-            <a href="#">UNIVERSIDAD ↗</a>
-            <a href="#">CARRERA ↗</a>
-            <a href="#perfil">PERFIL</a>
-            <a href="#materias">MATERIAS</a>
-            <a href="#malla">MALLA CURRICULAR</a>
-            <a href="#companeros">COMPAÑEROS</a>
-            <a href="#contacto">CONTACTO</a>
-        </div>
-    </nav>
-
-    <!-- PORTADA ACTUALIZADA SEGÚN TUS INDICACIONES -->
-    <section class="hero">
-        <h1>
-            Cinthia<br>
-            Luz<br>
-            Mamani<br>
-            Chata
-        </h1>
-        <p>
-            Estudiante de Ciencia de Datos en el Departamento de Ciencia de la Computación 
-            de la Universidad Católica San Pablo (UCSP), en Arequipa. Estoy iniciando mi camino 
-            en Ciencia de Datos.
-        </p>
+    <section id="perfil">
+      <div class="divider">✦ Perfil ✦</div>
+      <p class="perfil">Me llama mucho la atención la profundidad de los programas y cómo los datos son necesarios y decisivos en ellos. Busco adquirir todo el conocimiento técnico y humanitario que me permita crear soluciones con criterio, y estoy en búsqueda del camino a tomar dentro de este gran mundo de la programación. Soy de primer semestre.</p>
     </section>
 
-    <!-- SECCIÓN: PERFIL -->
-    <section id="perfil" class="container">
-        <h2 class="section-title">✦ PERFIL ✦</h2>
-        <p style="text-align: center; max-width: 800px; margin: 0 auto; font-size: 1.2rem;">
-            <strong>Me llama mucho la atención la profundidad de los programas y cómo los datos son necesarios y decisivos en ellos. Busco adquirir todo el conocimiento técnico y humanitario que me permita crear soluciones con criterio, y estoy en búsqueda del camino a tomar dentro de este gran mundo de la programación. Soy de primer semestre.</strong>
-        </p>
+    <section id="materias">
+      <div class="divider">✦ Materias ✦</div>
+      <ul class="mats">
+        <li><div class="dot" aria-hidden="true">∑</div><div><b>Introducción a Computación</b>
+          <div class="t"><a class="p" href="https://www.linkedin.com/in/ecuadrosv/" target="_blank" rel="noopener"><svg class="li" aria-hidden="true"><use href="#in"/></svg>Ernesto Cuadros Vargas</a><a class="m" href="mailto:ecuadros@ucsp.edu.pe">ecuadros@ucsp.edu.pe</a></div>
+          <div class="t"><a class="p" href="https://www.linkedin.com/in/rosmery-violeta-quispe-zavala-58374638/" target="_blank" rel="noopener"><svg class="li" aria-hidden="true"><use href="#in"/></svg>Rosmery Violeta Quispe Zavala</a><a class="m" href="mailto:rvquispe@ucsp.edu.pe">rvquispe@ucsp.edu.pe</a></div></div></li>
+        <li><div class="dot" aria-hidden="true">∑</div><div><b>Fundamentos de Programación</b>
+          <div class="t"><a class="p" href="https://www.linkedin.com/in/yessenia-yari-b4778139/" target="_blank" rel="noopener"><svg class="li" aria-hidden="true"><use href="#in"/></svg>Yessenia Deysi Yari Ramos</a><a class="m" href="mailto:ydyari@ucsp.edu.pe">ydyari@ucsp.edu.pe</a></div></div></li>
+        <li><div class="dot" aria-hidden="true">∑</div><div><b>Fundamentos Matemáticos para Computación</b>
+          <div class="t"><span class="p">Sabrina Suárez Calcina</span><a class="m" href="mailto:sgsuarez@ucsp.edu.pe">sgsuarez@ucsp.edu.pe</a></div></div></li>
+        <li><div class="dot" aria-hidden="true">∑</div><div><b>Introducción a la Vida Universitaria</b>
+          <div class="t"><a class="p" href="https://www.linkedin.com/in/gabriela-ponce-145b06149/" target="_blank" rel="noopener"><svg class="li" aria-hidden="true"><use href="#in"/></svg>Gabriela Ponce Reinoso</a><a class="m" href="mailto:gponce@ucsp.edu.pe">gponce@ucsp.edu.pe</a></div></div></li>
+        <li><div class="dot" aria-hidden="true">∑</div><div><b>Comunicación I</b>
+          <div class="t"><a class="p" href="https://www.linkedin.com/in/angel-rodriguez-cruz-58b78b85/" target="_blank" rel="noopener"><svg class="li" aria-hidden="true"><use href="#in"/></svg>Angel Rodríguez Cruz</a><a class="m" href="mailto:adrodriguez@ucsp.edu.pe">adrodriguez@ucsp.edu.pe</a></div></div></li>
+        <li><div class="dot" aria-hidden="true">∑</div><div><b>Lógica</b>
+          <div class="t"><a class="p" href="https://www.linkedin.com/in/kristel-gisselle-loayza-cruz-abb3b039b/" target="_blank" rel="noopener"><svg class="li" aria-hidden="true"><use href="#in"/></svg>Kristel Gisselle Loayza Cruz</a><a class="m" href="mailto:kristel.loayza@ucsp.edu.pe">kristel.loayza@ucsp.edu.pe</a></div></div></li>
+      </ul>
     </section>
 
-    <!-- SECCIÓN: MATERIAS -->
-    <section id="materias" class="container">
-        <h2 class="section-title">✦ MATERIAS ✦</h2>
-        <ul>
-            <li class="list-item"><em>∑</em> <strong>INTRODUCCIÓN A COMPUTACIÓN</strong> - Ernesto Cuadros Vargas (ecuadros@ucsp.edu.pe) | Rosmery Violeta Quispe Zavala (rvquispe@ucsp.edu.pe)</li>
-            <li class="list-item"><em>∑</em> <strong>FUNDAMENTOS DE PROGRAMACIÓN</strong> - Yessenia Deysi Yari Ramos (ydyari@ucsp.edu.pe)</li>
-            <li class="list-item"><em>∑</em> <strong>FUNDAMENTOS MATEMÁTICOS PARA COMPUTACIÓN</strong> - Sabrina Suárez Calcina (sgsuarez@ucsp.edu.pe)</li>
-            <li class="list-item"><em>∑</em> <strong>INTRODUCCIÓN A LA VIDA UNIVERSITARIA</strong> - Gabriela Ponce Reinoso (gponce@ucsp.edu.pe)</li>
-            <li class="list-item"><em>∑</em> <strong>COMUNICACIÓN I</strong> - Angel Rodríguez Cruz (adrodriguez@ucsp.edu.pe)</li>
-            <li class="list-item"><em>∑</em> <strong>LÓGICA</strong> - Kristel Gisselle Loayza Cruz (kristel.loayza@ucsp.edu.pe)</li>
-        </ul>
+    <section id="malla">
+      <div class="divider">✦ Malla curricular ✦</div>
+      <div class="malla">
+        <div class="cy now"><h3>Ciclo I <small>actual</small></h3><ul><li>Fundamentos de Programación</li><li>Introducción a Computación</li><li>Fundamentos Matemáticos para Computación</li><li>Comunicación I</li><li>Lógica</li><li>Introducción a la Vida Universitaria</li></ul></div>
+        <div class="cy"><h3>Ciclo II</h3><ul><li>Programación Orientada a Objetos</li><li>Estructuras Discretas</li><li>Cálculo Diferencial e Integral I</li><li>Comunicación II</li><li>Historia de Occidente</li></ul></div>
+        <div class="cy"><h3>Ciclo III</h3><ul><li>Técnicas Avanzadas de Programación</li><li>Base de Datos</li><li>Cálculo Diferencial e Integral II</li><li>Álgebra Lineal Computacional</li><li>Gnoseología y Tecnociencia</li><li>Análisis de la Realidad Peruana</li></ul></div>
+        <div class="cy"><h3>Ciclo IV</h3><ul><li>Algoritmos y Estructuras de Datos</li><li>Física Computacional</li><li>Estadística y Probabilidades</li><li>Análisis Numérico</li><li>Antropología y Nuevas Tecnologías</li><li>Metafísica</li></ul></div>
+        <div class="cy"><h3>Ciclo V</h3><ul><li>Arquitectura de Computadores</li><li>Ingeniería de Software</li><li>Análisis de Algoritmos</li><li>Lenguajes de Programación</li><li>Simulación Estocástica Computacional</li><li>Moral</li></ul></div>
+        <div class="cy"><h3>Ciclo VI</h3><ul><li>Sistemas Operativos</li><li>Compiladores</li><li>Big Data</li><li>Fundamentos de Ciencia de Datos</li><li>Fundamentos de Inteligencia Artificial</li><li>Fe y Razón</li></ul></div>
+        <div class="cy"><h3>Ciclo VII</h3><ul><li>Redes y Comunicación</li><li>Proyecto de Tesis I</li><li>Programación Web, Móvil y Multiplataforma</li><li>Aprendizaje de Máquina</li><li>Minería y Análisis Exploratorio de Datos</li><li>Liderazgo</li><li>Teología</li></ul></div>
+        <div class="cy"><h3>Ciclo VIII</h3><ul><li>Creación de Startups Basadas en Computación</li><li>Proyecto de Tesis II</li><li>Computación de Alto Desempeño</li><li>Aprendizaje Profundo</li><li>Análisis y Pronóstico de Series Temporales</li><li>Visualización de Datos</li></ul></div>
+        <div class="cy"><h3>Ciclo IX</h3><ul><li>Computación en la Nube</li><li>Computación Responsable</li><li>Interacción Humano Computador</li><li>Aprendizaje por Refuerzo</li><li>Proyecto de Tesis III en Ciencia de Datos</li><li>Cultura, Ciencia y Nuevas Tecnologías</li><li>Enseñanza Social de la Iglesia</li></ul></div>
+        <div class="cy"><h3>Ciclo X</h3><ul><li>Ingeniería de Software en la Industria (electivo)</li><li>Visión Computacional (electivo)</li><li>Procesamiento de Lenguaje Natural (electivo)</li><li>Proyecto de Tesis IV en Ciencia de Datos</li><li>Privacidad y Seguridad de Datos</li><li>Ciencia de Datos en la Industria</li><li>Análisis de Datos Basado en Grafos (electivo)</li><li>Ética Profesional</li></ul></div>
+      </div>
     </section>
 
-    <!-- SECCIÓN: MALLA CURRICULAR -->
-    <section id="malla" class="container">
-        <h2 class="section-title">✦ MALLA CURRICULAR ✦</h2>
-        <div class="grid-3">
-            <div class="ciclo-box">
-                <h3>CICLO I ACTUAL</h3>
-                <ul>
-                    <li>Fundamentos de Programación</li>
-                    <li>Introducción a Computación</li>
-                    <li>Fundamentos Matemáticos para Computación</li>
-                    <li>Comunicación I</li>
-                    <li>Lógica</li>
-                    <li>Introducción a la Vida Universitaria</li>
-                </ul>
-            </div>
-            <div class="ciclo-box">
-                <h3>CICLO II</h3>
-                <ul>
-                    <li>Programación Orientada a Objetos</li>
-                    <li>Estructuras Discretas</li>
-                    <li>Cálculo Diferencial e Integral I</li>
-                    <li>Comunicación II</li>
-                    <li>Historia de Occidente</li>
-                </ul>
-            </div>
-            <div class="ciclo-box">
-                <h3>CICLO III</h3>
-                <ul>
-                    <li>Técnicas Avanzadas de Programación</li>
-                    <li>Base de Datos</li>
-                    <li>Cálculo Diferencial e Integral II</li>
-                    <li>Álgebra Lineal Computacional</li>
-                    <li>Gnoseología y Tecnociencia</li>
-                    <li>Análisis de la Realidad Peruana</li>
-                </ul>
-            </div>
-            <div class="ciclo-box">
-                <h3>CICLO IV</h3>
-                <ul>
-                    <li>Algoritmos y Estructuras de Datos</li>
-                    <li>Física Computacional</li>
-                    <li>Estadística y Probabilidades</li>
-                    <li>Análisis Numérico</li>
-                    <li>Antropología y Nuevas Tecnologías</li>
-                    <li>Metafísica</li>
-                </ul>
-            </div>
-            <div class="ciclo-box">
-                <h3>CICLO V</h3>
-                <ul>
-                    <li>Arquitectura de Computadores</li>
-                    <li>Ingeniería de Software</li>
-                    <li>Análisis de Algoritmos</li>
-                    <li>Lenguajes de Programación</li>
-                    <li>Simulación Estocástica Computacional</li>
-                    <li>Moral</li>
-                </ul>
-            </div>
-            <div class="ciclo-box">
-                <h3>CICLO VI</h3>
-                <ul>
-                    <li>Sistemas Operativos</li>
-                    <li>Compiladores</li>
-                    <li>Big Data</li>
-                    <li>Fundamentos de Ciencia de Datos</li>
-                    <li>Fundamentos de Inteligencia Artificial</li>
-                    <li>Fe y Razón</li>
-                </ul>
-            </div>
-            <div class="ciclo-box">
-                <h3>CICLO VII</h3>
-                <ul>
-                    <li>Redes y Comunicación</li>
-                    <li>Proyecto de Tesis I</li>
-                    <li>Programación Web, Móvil y Multiplataforma</li>
-                    <li>Aprendizaje de Máquina</li>
-                    <li>Minería y Análisis Exploratorio de Datos</li>
-                    <li>Liderazgo</li>
-                    <li>Teología</li>
-                </ul>
-            </div>
-            <div class="ciclo-box">
-                <h3>CICLO VIII</h3>
-                <ul>
-                    <li>Creación de Startups Basadas en Computación</li>
-                    <li>Proyecto de Tesis II</li>
-                    <li>Computación de Alto Desempeño</li>
-                    <li>Aprendizaje Profundo</li>
-                    <li>Análisis y Pronóstico de Series Temporales</li>
-                    <li>Visualización de Datos</li>
-                </ul>
-            </div>
-            <div class="ciclo-box">
-                <h3>CICLO IX</h3>
-                <ul>
-                    <li>Computación en la Nube</li>
-                    <li>Computación Responsable</li>
-                    <li>Interacción Humano Computador</li>
-                    <li>Aprendizaje por Refuerzo</li>
-                    <li>Proyecto de Tesis III en Ciencia de Datos</li>
-                    <li>Cultura, Ciencia y Nuevas Tecnologías</li>
-                    <li>Enseñanza Social de la Iglesia</li>
-                </ul>
-            </div>
-            <div class="ciclo-box">
-                <h3>CICLO X</h3>
-                <ul>
-                    <li>Ingeniería de Software en la Industria</li>
-                    <li>Visión Computacional</li>
-                    <li>Procesamiento de Lenguaje Natural</li>
-                    <li>Proyecto de Tesis IV en Ciencia de Datos</li>
-                    <li>Privacidad y Seguridad de Datos</li>
-                    <li>Ciencia de Datos en la Industria</li>
-                    <li>Análisis de Datos Basado en Grafos</li>
-                    <li>Ética Profesional</li>
-                </ul>
-            </div>
-        </div>
+    <section id="companeros">
+      <div class="divider">✦ Compañeros ✦</div>
+      <ul class="peers">
+        <li><a class="p" href="https://www.linkedin.com/in/emely-mirella-anccari-lopez-9371a043a/" target="_blank" rel="noopener"><svg class="li" aria-hidden="true"><use href="#in"/></svg>Emely Mirella Anccari Lopez</a></li>
+        <li><a class="p" href="https://www.linkedin.com/in/zeeshan-muhammad-corimanya-3b5744435/" target="_blank" rel="noopener"><svg class="li" aria-hidden="true"><use href="#in"/></svg>Zeeshan Muhammad Corimanya</a></li>
+        <li><a class="p" href="https://www.linkedin.com/in/andres-caballero-5a2367436/" target="_blank" rel="noopener"><svg class="li" aria-hidden="true"><use href="#in"/></svg>Andres Caballero</a></li>
+        <li><a class="p" href="https://www.linkedin.com/in/juan-gabriel-huanaco-quispe-47750128b/" target="_blank" rel="noopener"><svg class="li" aria-hidden="true"><use href="#in"/></svg>Juan Gabriel Huanaco Quispe</a></li>
+        <li><a class="p" href="https://www.linkedin.com/in/juan-rodrigo-callo-huayna-2493893a6/" target="_blank" rel="noopener"><svg class="li" aria-hidden="true"><use href="#in"/></svg>Juan Rodrigo Callo Huayna</a></li>
+        <li><a class="p" href="https://www.linkedin.com/in/jos%C3%A9-manuel-alviar-6889b33a3/" target="_blank" rel="noopener"><svg class="li" aria-hidden="true"><use href="#in"/></svg>José Manuel Alviar</a></li>
+        <li><a class="p" href="https://www.linkedin.com/in/kevin-farlyn-rivero-parisua%C3%B1a-626915441/" target="_blank" rel="noopener"><svg class="li" aria-hidden="true"><use href="#in"/></svg>Kevin Farlyn Rivero Parisuaña</a></li>
+        <li><a class="p" href="https://www.linkedin.com/in/rodrigo-espinoza-b49b363b4/" target="_blank" rel="noopener"><svg class="li" aria-hidden="true"><use href="#in"/></svg>Rodrigo Raúl Estefano Espinoza Concha</a></li>
+        <li><a class="p" href="https://www.linkedin.com/in/jorge-manuel-firata-quispe-40b648282/" target="_blank" rel="noopener"><svg class="li" aria-hidden="true"><use href="#in"/></svg>Jorge Manuel Firata Quispe</a></li>
+      </ul>
     </section>
+  </main>
+</div>
 
-    <!-- SECCIÓN: COMPAÑEROS -->
-    <section id="companeros" class="container">
-        <h2 class="section-title">✦ COMPAÑEROS ✦</h2>
-        <div class="grid-3" style="text-align: center;">
-            <p>in <a href="#">Emely Mirella Anccari Lopez</a></p>
-            <p>in <a href="#">Zeeshan Muhammad Corimanya</a></p>
-            <p>in <a href="#">Andres Caballero</a></p>
-            <p>in <a href="#">Juan Gabriel Huanaco Quispe</a></p>
-            <p>in <a href="#">Juan Rodrigo Callo Huayna</a></p>
-            <p>in <a href="#">José Manuel Alviar</a></p>
-            <p>in <a href="#">Kevin Farlyn Rivero Parisuaña</a></p>
-            <p>in <a href="#">Rodrigo Raúl Estefano Espinoza Concha</a></p>
-            <p>in <a href="#">Jorge Manuel Firata Quispe</a></p>
-        </div>
-    </section>
-
-    <!-- SECCIÓN: FOOTER / CONTACTO -->
-    <footer id="contacto">
-        <div class="conectemos-title">Conectemos</div>
-        <div class="grid-2 container" style="padding-top: 0; padding-bottom: 20px;">
-            <div>
-                <h4 style="letter-spacing: 2px; text-transform: uppercase;">ESCRÍBEME</h4>
-                <a href="mailto:cinthia.mamani@ucsp.edu.pe" style="font-family: sans-serif; font-weight: normal;">cinthia.mamani@ucsp.edu.pe</a>
-            </div>
-            <div>
-                <h4 style="letter-spacing: 2px; text-transform: uppercase;">SÍGUEME</h4>
-                <a href="#" style="margin: 0 10px;">GitHub</a> 
-                <a href="#" style="margin: 0 10px;">LinkedIn</a>
-            </div>
-        </div>
-        <p style="margin-top: 30px; font-size: 0.8rem; text-align: center; border-top: 1px solid rgba(245, 240, 235, 0.2); padding-top: 20px;">
-            © 2026 Cinthia Luz Mamani Chata
-        </p>
-    </footer>
-
+<footer id="contacto">
+  <div class="wrap">
+    <p class="big">Conectemos</p>
+    <div><h2>Escríbeme</h2><a href="mailto:cinthia.mamani@ucsp.edu.pe">cinthia.mamani@ucsp.edu.pe</a></div>
+    <div><h2>Sígueme</h2>
+      <div class="social">
+        <a href="https://github.com/cinthia-tech609" target="_blank" rel="noopener me" aria-label="GitHub">gh</a>
+        <a href="mailto:cinthia.mamani@ucsp.edu.pe" aria-label="Correo">@</a>
+      </div>
+    </div>
+    <p class="copy">© 2026 Cinthia Luz Mamani Chata</p>
+  </div>
+</footer>
 </body>
 </html>
