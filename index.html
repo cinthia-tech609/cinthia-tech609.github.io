@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Cinthia Luz Mamani Chata | Ciencia de Datos, Universidad Católica San Pablo</title>
-<meta name="description" content="Cinthia Luz Mamani Chata, de Ciencia de Datos en la Universidad Católica San Pablo (UCSP). Materias, profesores y compañeros.">
+<meta name="description" content="Cinthia Luz Mamani Chata, de Ciencia de Datos en la Universidad Católica San Pablo (UCSP). Formación académica, habilidades, materias, profesores y compañeros.">
 <link rel="canonical" href="https://cinthia-tech609.github.io/">
 <meta property="og:title" content="Cinthia Luz Mamani Chata">
 <meta property="og:description" content="Ciencia de Datos, Universidad Católica San Pablo.">
@@ -25,9 +25,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Jost:wght@400;500;600&family=JetBrains+Mono:wght@400&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
 <style>
-:root{--wine:#5b1d27;--cream:#ece6dd;--rose:#b9766f;--blush:#e4cdc6;--ink:#2d1b1e;--line:#c9bfb2;
-/* Colores de las tarjetas: cámbialos aquí si quieres otros */
---card-mat:#e8d3cc;--card-peer:#d8a39b;--rose-deep:#8a4a45;
+:root{--wine:#5b1d27;--cream:#ece6dd;--rose:#b9766f;--blush:#e4cdc6;--ink:#2d1b1e;
+/* Tarjetas: blanco translúcido. Sube o baja el .07 para más o menos transparencia */
+--glass:rgba(255,255,255,.07);--edge:rgba(255,255,255,.32);--rule:rgba(255,255,255,.4);
 --serif-h:"Fraunces",Georgia,"Times New Roman",serif;
 --sans:"Poppins","Jost",system-ui,sans-serif;--body:"Jost",system-ui,-apple-system,"Segoe UI",sans-serif;--mono:"JetBrains Mono",ui-monospace,Menlo,monospace}
 *{box-sizing:border-box}
@@ -60,36 +60,41 @@ a:focus-visible{outline:3px solid var(--blush);outline-offset:3px}
 .rail svg{width:100%;height:100%}
 
 /* ---------- Secciones ---------- */
-.sec{margin-top:4rem;padding-top:4rem;border-top:1px solid rgba(236,230,221,.16)}
-#materias{border-top:0;margin-top:0;padding-top:4.5rem}
+.sec{margin-top:4rem;padding-top:4rem;border-top:1px solid var(--edge)}
+#formacion{border-top:0;margin-top:0;padding-top:4.5rem}
 .sec h2{font:700 clamp(2rem,4.4vw,3rem)/1.1 var(--serif-h);letter-spacing:-.01em;margin:0 0 .5rem}
 .sec .sub{color:var(--blush);opacity:.85;font-size:1.08rem;margin:0 0 2rem}
 
+/* ---------- Estilo currículum: formación y habilidades ---------- */
+.cvi{margin-top:1.6rem;padding-top:1.2rem;border-top:1px solid var(--edge)}
+.cvi b{display:block;font:600 1.4rem/1.3 var(--serif-h)}
+.cvi span{display:block;color:var(--blush);font-size:1.08rem;margin-top:.2rem}
+.tags{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.6rem}
+.tag{padding:.6rem 1.3rem;border-radius:999px;background:var(--glass);border:1px solid var(--edge);font:500 1rem var(--body)}
+
 /* ---------- Botones (LinkedIn, correo, página web) ---------- */
 .ch{display:flex;flex-wrap:wrap;gap:.5rem}
-.chip{display:inline-flex;align-items:center;gap:.45em;padding:.45rem 1rem;border:2px solid var(--wine);border-radius:999px;background:var(--wine);color:var(--cream);font:600 .7rem var(--sans);letter-spacing:.1em;text-transform:uppercase;text-decoration:none;line-height:1.3}
+.chip{display:inline-flex;align-items:center;gap:.45em;padding:.45rem 1rem;border:1px solid var(--cream);border-radius:999px;background:var(--cream);color:var(--wine);font:600 .7rem var(--sans);letter-spacing:.1em;text-transform:uppercase;text-decoration:none;line-height:1.3}
 .chip svg{width:1.2em;height:1.2em;flex:none}
-.chip:hover{background:#40141c;border-color:#40141c}
-.chip.em{background:var(--rose-deep);border-color:var(--rose-deep);font:400 .74rem var(--mono);letter-spacing:0;text-transform:none}
-.chip.em:hover{background:#6e3a35;border-color:#6e3a35}
-.chip.off{background:transparent;color:var(--wine);border-style:dashed;opacity:.85;cursor:default}
-.chip.off:hover{background:transparent;border-color:var(--wine)}
+.chip:hover{background:#fff;border-color:#fff}
+.chip.em{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.55);color:var(--cream);font:400 .74rem var(--mono);letter-spacing:0;text-transform:none}
+.chip.em:hover{background:rgba(255,255,255,.22)}
+.chip.off{background:transparent;border:1px dashed rgba(255,255,255,.45);color:rgba(236,230,221,.7);cursor:default}
+.chip.off:hover{background:transparent;border-color:rgba(255,255,255,.45)}
 
-/* ---------- Tarjetas en columnas ---------- */
+/* ---------- Tarjetas translúcidas ---------- */
 .mats,.peers{list-style:none;margin:0;padding:0;display:grid;gap:1.2rem}
 .mats{grid-template-columns:repeat(2,1fr)}
 .peers{grid-template-columns:repeat(3,1fr)}
-.mats>li,.peers>li{color:var(--ink);border-radius:16px;box-shadow:0 12px 28px rgba(0,0,0,.28);padding:1.2rem 1.3rem}
-.mats>li{background:var(--card-mat)}
-.peers>li{background:var(--card-peer)}
+.mats>li,.peers>li{background:var(--glass);border:1px solid var(--edge);border-radius:14px;padding:1.3rem 1.4rem}
 
-.ct{display:block;font:600 1.08rem/1.25 var(--body);letter-spacing:.07em;text-transform:uppercase;color:var(--wine);padding-bottom:.7rem;margin-bottom:.95rem;border-bottom:2px solid var(--wine)}
-.tr{display:grid;grid-template-columns:48px 1fr;gap:.9rem;align-items:start;padding:.9rem 0 0;margin-top:.9rem;border-top:2px solid rgba(91,29,39,.5)}
+.ct{display:block;font:600 1.05rem/1.25 var(--body);letter-spacing:.08em;text-transform:uppercase;color:#fff;padding-bottom:.75rem;margin-bottom:1rem;border-bottom:1px solid var(--rule)}
+.tr{display:grid;grid-template-columns:48px 1fr;gap:.9rem;align-items:start;padding:.95rem 0 0;margin-top:.95rem;border-top:1px solid var(--edge)}
 .ct+.tr{border-top:0;padding-top:0;margin-top:0}
-.av{width:48px;height:48px;border-radius:50%;overflow:hidden;display:block;box-shadow:0 0 0 2px var(--wine)}
+.av{width:48px;height:48px;border-radius:50%;overflow:hidden;display:block;box-shadow:0 0 0 1.5px rgba(255,255,255,.7)}
 .av svg{width:100%;height:100%;display:block}
-.nm{display:block;font:500 1.02rem/1.3 var(--body);margin-bottom:.55rem}
-.pn{display:block;font:600 1.1rem/1.25 var(--body);padding-bottom:.65rem;margin-bottom:.85rem;border-bottom:2px solid var(--wine)}
+.nm{display:block;font:500 1.04rem/1.3 var(--body);margin-bottom:.55rem}
+.pn{display:block;font:600 1.1rem/1.25 var(--body);color:#fff;padding-bottom:.7rem;margin-bottom:.9rem;border-bottom:1px solid var(--rule)}
 
 footer{background:#40141c;color:var(--cream);margin-top:5rem;padding:2.6rem 0 2.2rem}
 footer .wrap{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:2rem;align-items:center}
@@ -115,6 +120,7 @@ footer .wrap{grid-template-columns:1fr}}
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
 <symbol id="in" viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></symbol>
 <symbol id="ml" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="m3 7 9 6 9-6" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+<symbol id="gl" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
 <symbol id="fem" viewBox="0 0 48 48"><rect width="48" height="48" fill="#e4cdc6"/><path d="M12 36V22c0-7 5-12 12-12s12 5 12 12v14z" fill="#5b1d27"/><rect x="21" y="26" width="6" height="9" fill="#f3e3da"/><path d="M6 48c0-9 8-13 18-13s18 4 18 13z" fill="#b9766f"/><circle cx="24" cy="20" r="8" fill="#f3e3da"/><path d="M16 19c1-6 5-8 8-8s7 2 8 8c-3-3-6-4-8-4s-5 1-8 4z" fill="#5b1d27"/></symbol>
 <symbol id="mas" viewBox="0 0 48 48"><rect width="48" height="48" fill="#d8cfc4"/><rect x="21" y="26" width="6" height="9" fill="#f3e3da"/><path d="M6 48c0-9 8-13 18-13s18 4 18 13z" fill="#5b1d27"/><circle cx="24" cy="20" r="8" fill="#f3e3da"/><path d="M16 20c-1-7 3-11 8-11s9 4 8 11c-2-3-4-4-8-4s-6 1-8 4z" fill="#2d1b1e"/></symbol>
 </svg>
@@ -127,7 +133,7 @@ footer .wrap{grid-template-columns:1fr}}
         <a href="https://dc.ucsp.edu.pe/pregrado/ciencia-datos/" target="_blank" rel="noopener">Ciencia de Datos ↗</a>
       </div>
       <nav aria-label="Secciones">
-        <a href="#materias">Materias</a><a href="#companeros">Compañeros</a><a href="#contacto">Contacto</a>
+        <a href="#formacion">Formación</a><a href="#habilidades">Habilidades</a><a href="#materias">Materias</a><a href="#companeros">Compañeros</a><a href="#contacto">Contacto</a>
       </nav>
     </header>
 
@@ -135,7 +141,7 @@ footer .wrap{grid-template-columns:1fr}}
       <h1>Cinthia Luz<span>Mamani Chata</span></h1>
       <div class="rule" aria-hidden="true"></div>
       <p>Como estudiante de 1° semestre de la carrera Ciencia de Datos en la UCSP, me atrae la profundidad de los programas y cómo los datos son necesarios y decisivos en ellos. Busco adquirir todo el conocimiento técnico y humanitario que me permita crear soluciones con criterio, y estoy en búsqueda del camino a tomar dentro de este gran mundo de la programación.</p>
-      <a class="pill" href="#materias">Conoce más</a>
+      <a class="pill" href="#formacion">Conoce más</a>
     </div>
   </div>
 
@@ -148,6 +154,16 @@ footer .wrap{grid-template-columns:1fr}}
 
 <div class="wrap">
   <main>
+    <section class="sec" id="formacion">
+      <h2>Formación académica</h2>
+      <div class="cvi"><b>Universidad Católica San Pablo</b><span>Ciencia de Datos | 2026 – Actual</span></div>
+    </section>
+
+    <section class="sec" id="habilidades">
+      <h2>Habilidades</h2>
+      <div class="tags"><span class="tag">Español</span><span class="tag">Python (en proceso)</span></div>
+    </section>
+
     <section class="sec" id="materias">
       <h2>Materias</h2>
       <p class="sub">Docentes del primer ciclo</p>
@@ -172,15 +188,15 @@ footer .wrap{grid-template-columns:1fr}}
       <h2>Compañeros</h2>
       <p class="sub">Compañeros de clase</p>
       <ul class="peers">
-        <li><b class="pn">Andres Caballero</b><div class="ch"><a class="chip" href="https://www.linkedin.com/in/andres-caballero-5a2367436/" target="_blank" rel="noopener"><svg class="fc" aria-hidden="true"><use href="#in"/></svg>LinkedIn</a><span class="chip off" aria-disabled="true" title="Próximamente">Página web</span></div></li>
-        <li><b class="pn">Emely Mirella Anccari Lopez</b><div class="ch"><a class="chip" href="https://www.linkedin.com/in/emely-mirella-anccari-lopez-9371a043a/" target="_blank" rel="noopener"><svg class="fc" aria-hidden="true"><use href="#in"/></svg>LinkedIn</a><span class="chip off" aria-disabled="true" title="Próximamente">Página web</span></div></li>
-        <li><b class="pn">Jorge Manuel Firata Quispe</b><div class="ch"><a class="chip" href="https://www.linkedin.com/in/jorge-manuel-firata-quispe-40b648282/" target="_blank" rel="noopener"><svg class="fc" aria-hidden="true"><use href="#in"/></svg>LinkedIn</a><span class="chip off" aria-disabled="true" title="Próximamente">Página web</span></div></li>
-        <li><b class="pn">José Manuel Alviar</b><div class="ch"><a class="chip" href="https://www.linkedin.com/in/jos%C3%A9-manuel-alviar-6889b33a3/" target="_blank" rel="noopener"><svg class="fc" aria-hidden="true"><use href="#in"/></svg>LinkedIn</a><span class="chip off" aria-disabled="true" title="Próximamente">Página web</span></div></li>
-        <li><b class="pn">Juan Gabriel Huanaco Quispe</b><div class="ch"><a class="chip" href="https://www.linkedin.com/in/juan-gabriel-huanaco-quispe-47750128b/" target="_blank" rel="noopener"><svg class="fc" aria-hidden="true"><use href="#in"/></svg>LinkedIn</a><span class="chip off" aria-disabled="true" title="Próximamente">Página web</span></div></li>
-        <li><b class="pn">Juan Rodrigo Callo Huayna</b><div class="ch"><a class="chip" href="https://www.linkedin.com/in/juan-rodrigo-callo-huayna-2493893a6/" target="_blank" rel="noopener"><svg class="fc" aria-hidden="true"><use href="#in"/></svg>LinkedIn</a><span class="chip off" aria-disabled="true" title="Próximamente">Página web</span></div></li>
-        <li><b class="pn">Kevin Farlyn Rivero Parisuaña</b><div class="ch"><a class="chip" href="https://www.linkedin.com/in/kevin-farlyn-rivero-parisua%C3%B1a-626915441/" target="_blank" rel="noopener"><svg class="fc" aria-hidden="true"><use href="#in"/></svg>LinkedIn</a><span class="chip off" aria-disabled="true" title="Próximamente">Página web</span></div></li>
-        <li><b class="pn">Rodrigo Raúl Estefano Espinoza Concha</b><div class="ch"><a class="chip" href="https://www.linkedin.com/in/rodrigo-espinoza-b49b363b4/" target="_blank" rel="noopener"><svg class="fc" aria-hidden="true"><use href="#in"/></svg>LinkedIn</a><span class="chip off" aria-disabled="true" title="Próximamente">Página web</span></div></li>
-        <li><b class="pn">Zeeshan Muhammad Corimanya</b><div class="ch"><a class="chip" href="https://www.linkedin.com/in/zeeshan-muhammad-corimanya-3b5744435/" target="_blank" rel="noopener"><svg class="fc" aria-hidden="true"><use href="#in"/></svg>LinkedIn</a><span class="chip off" aria-disabled="true" title="Próximamente">Página web</span></div></li>
+        <li><b class="pn">Andres Caballero</b><div class="ch"><a class="chip" href="https://www.linkedin.com/in/andres-caballero-5a2367436/" target="_blank" rel="noopener"><svg class="fc" aria-hidden="true"><use href="#in"/></svg>LinkedIn</a><a class="chip" href="https://apocalipto3000.github.io/Andres_Caballero/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#gl"/></svg>Página web</a></div></li>
+        <li><b class="pn">Bianka Camila Hacha Calienes</b><div class="ch"><a class="chip" href="https://biankahacha-ui.github.io/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#gl"/></svg>Página web</a></div></li>
+        <li><b class="pn">Emely Mirella Anccari Lopez</b><div class="ch"><a class="chip" href="https://www.linkedin.com/in/emely-mirella-anccari-lopez-9371a043a/" target="_blank" rel="noopener"><svg class="fc" aria-hidden="true"><use href="#in"/></svg>LinkedIn</a><a class="chip" href="https://emelyanccari-ops.github.io/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#gl"/></svg>Página web</a></div></li>
+        <li><b class="pn">Jorge Manuel Firata Quispe</b><div class="ch"><a class="chip" href="https://www.linkedin.com/in/jorge-manuel-firata-quispe-40b648282/" target="_blank" rel="noopener"><svg class="fc" aria-hidden="true"><use href="#in"/></svg>LinkedIn</a><span class="chip off" aria-disabled="true" title="Próximamente"><svg aria-hidden="true"><use href="#gl"/></svg>Página web</span></div></li>
+        <li><b class="pn">José Manuel Alviar</b><div class="ch"><a class="chip" href="https://www.linkedin.com/in/jos%C3%A9-manuel-alviar-6889b33a3/" target="_blank" rel="noopener"><svg class="fc" aria-hidden="true"><use href="#in"/></svg>LinkedIn</a><a class="chip" href="https://josealviar-acc.github.io/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#gl"/></svg>Página web</a></div></li>
+        <li><b class="pn">Juan Gabriel Huanaco Quispe</b><div class="ch"><a class="chip" href="https://www.linkedin.com/in/juan-gabriel-huanaco-quispe-47750128b/" target="_blank" rel="noopener"><svg class="fc" aria-hidden="true"><use href="#in"/></svg>LinkedIn</a><a class="chip" href="https://guanaco20.github.io/UCSP_CS/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#gl"/></svg>Página web</a></div></li>
+        <li><b class="pn">Rodrigo Raúl Estefano Espinoza Concha</b><div class="ch"><a class="chip" href="https://www.linkedin.com/in/rodrigo-espinoza-b49b363b4/" target="_blank" rel="noopener"><svg class="fc" aria-hidden="true"><use href="#in"/></svg>LinkedIn</a><a class="chip" href="https://rreec-253.github.io/MyPage/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#gl"/></svg>Página web</a></div></li>
+        <li><b class="pn">Sebastian Andre Ochoa Ortiz</b><div class="ch"><a class="chip" href="https://www.linkedin.com/in/sebastian-ochoa-ortiz-272197367/" target="_blank" rel="noopener"><svg class="fc" aria-hidden="true"><use href="#in"/></svg>LinkedIn</a><span class="chip off" aria-disabled="true" title="Próximamente"><svg aria-hidden="true"><use href="#gl"/></svg>Página web</span></div></li>
+        <li><b class="pn">Zeeshan Muhammad Corimanya</b><div class="ch"><a class="chip" href="https://www.linkedin.com/in/zeeshan-muhammad-corimanya-3b5744435/" target="_blank" rel="noopener"><svg class="fc" aria-hidden="true"><use href="#in"/></svg>LinkedIn</a><a class="chip" href="https://zeeshanmcorimanya.github.io/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#gl"/></svg>Página web</a></div></li>
       </ul>
     </section>
   </main>
