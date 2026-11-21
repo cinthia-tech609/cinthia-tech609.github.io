@@ -23,13 +23,13 @@
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=Jost:wght@400;500;600&family=JetBrains+Mono:wght@400&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600;700&family=Jost:wght@400;500;600&family=JetBrains+Mono:wght@400&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
 <style>
 :root{--wine:#5b1d27;--cream:#ece6dd;--rose:#b9766f;--blush:#e4cdc6;--ink:#2d1b1e;
 /* Tarjetas: blanco translúcido. Sube o baja el .07 para más o menos transparencia */
 --glass:rgba(255,255,255,.07);--edge:rgba(255,255,255,.32);--rule:rgba(255,255,255,.4);
-/* Letra de los títulos de sección. Para otra más moderna, cambia "Source Serif 4" por "Poppins" */
---serif-h:"Source Serif 4",Georgia,"Times New Roman",serif;
+/* Letra de los títulos de sección (formal, estilo currículum) */
+--head:"IBM Plex Sans","Helvetica Neue",Arial,sans-serif;
 --sans:"Poppins","Jost",system-ui,sans-serif;--body:"Jost",system-ui,-apple-system,"Segoe UI",sans-serif;--mono:"JetBrains Mono",ui-monospace,Menlo,monospace}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;color-scheme:dark}
@@ -63,12 +63,12 @@ a:focus-visible{outline:3px solid var(--blush);outline-offset:3px}
 /* ---------- Secciones ---------- */
 .sec{margin-top:4rem;padding-top:4rem;border-top:1px solid var(--edge)}
 #formacion{border-top:0;margin-top:0;padding-top:4.5rem}
-.sec h2{font:700 clamp(1.9rem,4vw,2.6rem)/1.15 var(--serif-h);letter-spacing:-.005em;margin:0 0 .5rem}
+.sec h2{font:600 clamp(1.15rem,2.2vw,1.45rem)/1.3 var(--head);letter-spacing:.16em;text-transform:uppercase;margin:0 0 .6rem}
 .sec .sub{color:var(--blush);opacity:.85;font-size:1.08rem;margin:0 0 2rem}
 
 /* ---------- Estilo currículum: formación y habilidades ---------- */
 .cvi{margin-top:1.6rem;padding-top:1.2rem;border-top:1px solid var(--edge)}
-.cvi b{display:block;font:600 1.4rem/1.3 var(--serif-h)}
+.cvi b{display:block;font:600 1.3rem/1.3 var(--head)}
 .cvi span{display:block;color:var(--blush);font-size:1.08rem;margin-top:.2rem}
 .tags{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.6rem}
 .tag{padding:.6rem 1.3rem;border-radius:999px;background:var(--glass);border:1px solid var(--edge);font:500 1rem var(--body)}
@@ -99,7 +99,7 @@ a:focus-visible{outline:3px solid var(--blush);outline-offset:3px}
 
 footer{background:#40141c;color:var(--cream);margin-top:5rem;padding:2.6rem 0 2.2rem}
 footer .wrap{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:2rem;align-items:center}
-footer .big{font:700 clamp(1.8rem,4vw,2.4rem)/1 var(--serif-h);margin:0}
+footer .big{font:600 clamp(1.15rem,2.2vw,1.45rem)/1.3 var(--head);letter-spacing:.16em;text-transform:uppercase;margin:0}
 footer h2{font:500 .8rem var(--body);letter-spacing:.22em;text-transform:uppercase;margin:0 0 .6rem}
 footer a{text-decoration:none}
 .social{display:flex;gap:.6rem}
